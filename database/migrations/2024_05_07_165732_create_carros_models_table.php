@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('carros_models', function (Blueprint $table) {
             $table->id();
             $table->string('modelo', 80)->nullable(false);
-            $table->decimal('preco', 18,2)->nullable(false);
+            $table->string('ano',4)->nullable(false);
+            $table->decimal('preco')->nullable(false);
             $table->string('descricao', 400)->nullable(false);
             $table->string('marca', 150)->nullable(false);
             $table->string('cor', 150)->nullable(false);

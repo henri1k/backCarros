@@ -13,7 +13,7 @@ class CarrosRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -27,7 +27,7 @@ class CarrosRequest extends FormRequest
             
             'modelo' => 'required|max:150|',
             'ano' => 'required|max:4|min:4|',
-            'preco' => 'required|decimal:18,2|',
+            'preco' => 'required|decimal:2',
             'marca' => 'required|max:150|',
             'cor' => 'required|max:150|',
             'peso' => 'required|max:150',
